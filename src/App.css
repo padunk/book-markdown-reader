@@ -1,0 +1,11 @@
+#main__app {
+  box-sizing: border-box;
+  display: grid;
+}
+
+.app {
+  position: relative;
+  top: 5em;
+  display: flex;
+  justify-content: center;
+}
