@@ -7,7 +7,7 @@ export const NavBar: React.StatelessComponent<{}> = () => {
     return (
         <nav className='navbar__main'>
             <NavLink exact={true} to='/' activeClassName='active'>Home</NavLink>
-            <NavLink to='/booklist'>Books List</NavLink>
+            <NavLink to='/newbook/add'>Add Book</NavLink>
             <NavLink to='/reader/'>Reader</NavLink>
         </nav>
     )

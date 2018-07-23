@@ -19,7 +19,7 @@ export const URL_LIST = [
     },
     {
         book_author: 'Brian Lonsdorf',
-        book_title: "Professor Frisby's Mostly Adquate Guide to Functional Programming",
+        book_title: "Professor Frisby's Mostly Adequate Guide to Functional Programming",
         chapter_digit: 2,
         chapter_end: 12,
         chapter_start: 1,

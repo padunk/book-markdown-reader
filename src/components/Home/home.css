@@ -1,0 +1,142 @@
+/* BOOK LIST */
+.home__main {
+    max-width: 80%;
+}
+
+.home__title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.home__ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.home__list {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width: 300px;
+}
+.home__list--imageDiv {
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: -1px -2px 15px rgba(0,0,0, 0.2), 0 5px 15px rgba(0,0,0, 0.2);
+}
+.home__list--image {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 500ms;
+}
+.home__list--image:hover {
+    transform: scale(1.05);
+}
+.home__list--bookTitle {
+    font-size: 0.8125em;
+    margin-bottom: 0.25em;
+    color: #333;
+}
+.home__list--bookAuthor {
+    margin-top: 0.25em;
+    font-size: 0.6125em;
+}
+
+/* BOOK DETAIL */
+.book__title {
+    font-size: 2em;
+}
+.book__list {
+    font-size: 1.4em;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+/* ADD BOOK */
+.addBook__main {
+    max-width: 100%;
+}
+.addBook__title {
+    text-align: center;
+    font-size: 2em;
+}
+.addBook__form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+label, input, button {
+    padding: 7px;
+    margin: 7px;
+}
+label {
+    margin-right: 10px;
+    text-align: right;
+}
+[id ^= 'addBook'] {
+    width: 500px;
+    border-radius: 8px;
+}
+.addBook__button--cancel {
+    margin-top: 10px;
+    padding: 14px 16px;
+    background: linear-gradient(90deg, hsla(0, 80%, 80%, 0.8), hsla(310, 80%, 70%, 0.9));
+    opacity: 0.7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 500ms;
+    letter-spacing: 1px;
+    float: right;
+}
+.addBook__button--cancel:hover {
+    opacity: 1;
+    font-weight: bold;
+    color: red;
+}
+.addBook__button--submit {
+    margin-top: 10px;
+    padding: 14px 16px;
+    background: linear-gradient(90deg, hsla(300, 80%, 80%, 0.8), hsla(240, 80%, 70%, 0.9));
+    opacity: 0.7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 500ms;
+    letter-spacing: 1px;
+}
+.addBook__button--submit:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 930px) {
+    .addBook__form {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+    }
+    [id ^= 'addBook'] {
+        width: 90%;
+    }
+    label {
+        text-align: left;
+    }
+}

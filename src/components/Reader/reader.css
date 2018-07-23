@@ -1,0 +1,29 @@
+.reader__article {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.reader__article > blockquote {
+    border-left: 5px solid lightblue;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.reader__article > h1 {
+    font-size: 2em;
+}
+.reader__article > h2 {
+    font-size: 1.8em;
+}
+.reader__article > h3 {
+    font-size: 1.6em;
+}
+.reader__article > p {
+    font-size: 1.4em;
+}
+
+@media only screen and (min-width: 600px) {
+    .reader__article {
+        max-width: 60%;
+    }
+}
