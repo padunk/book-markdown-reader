@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid/v4';
 
-import { addBooks } from '../api/fetchingAPI';
+import { addBook } from '../api/fetchingAPI';
 
 import './home.css';
 
@@ -30,13 +30,12 @@ export class AddBook extends React.Component<IAddBookProp, {}> {
 
       // tslint:disable-next-line:no-console
       // console.log(author, title, start, end, id, imgSrc, url, digit);
-      addBooks(author, title, digit, start, end, id, imgSrc, url);
-      this.props.history.goBack();
+      addBook(author, title, digit, start, end, id, imgSrc, url);
+      this.props.history.push('/');
    }
 
    public render() {
       // tslint:disable-next-line:no-console
-      console.log(this.props.history);
       return (
          <div className='addBook__main'>
          <h2 className='addBook__title'>Add New Book</h2>

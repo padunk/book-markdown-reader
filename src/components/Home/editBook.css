@@ -1,0 +1,14 @@
+.editBook__main {
+   max-width: 100%;
+}
+.editBook__mainTitle, .editBook__title {
+   text-align: center;
+}
+.editBook__title {
+   text-transform: capitalize;
+}
+.editBook__form {
+   display: grid;
+   grid-template-columns: auto auto;
+   justify-content: center;
+}

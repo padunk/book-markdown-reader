@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import { AddBook } from './components/Home/addBook';
 import { BookList } from './components/Home/bookList';
 import { BookListDetail } from './components/Home/bookListDetail';
+import { DeleteBook } from './components/Home/deleteBook';
+import { EditBook } from './components/Home/editBook';
 import { NavBar } from './components/Navigation/navbar';
 import { MainReader } from './components/Reader/mainReader';
 import { Reader } from './components/Reader/readerDetail';
@@ -23,6 +25,8 @@ class App extends React.Component<{}, {}> {
           <Route exact={true} path='/reader/:book/:chapter' component= { Reader } />
           <Route exact={true} path='/book/:detail' component = { BookListDetail } />
           <Route exact={true} path='/newbook/add' component = { AddBook } />
+          <Route exact={true} path='/editbook/:title' component = { EditBook } />
+          <Route exact={true} path='/deletebook/:title' component = { DeleteBook } />
           <Route component = { NotFound } />
         </Switch>
       </div>

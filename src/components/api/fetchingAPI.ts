@@ -16,7 +16,7 @@ export const fetchBooks = async() => {
     return res.json();
 }
 
-export const addBooks = (author: string, 
+export const addBook = (author: string, 
     title: string,
     digit: number | null,
     start: number,
@@ -39,4 +39,39 @@ export const addBooks = (author: string,
         headers,
         method: 'POST',
      })
+     .then(res => res.json())
+}
+
+export const editBook = (
+    author: string, 
+    title: string,
+    digit: number,
+    start: number,
+    end: number,
+    id: number | string,
+    img: string,
+    url: string) => {
+
+    fetch(`${urlBooks}/books/${id}`, { 
+        body: JSON.stringify ({
+            book_author: author,
+            book_title: title,
+            chapter_digit: digit,
+            chapter_end: end,
+            chapter_start: start,
+            image_src: img,
+            url
+        }),
+        headers,
+        method: 'PUT',
+     })
+     .then(res => res.json())
+}
+
+export const DELETE_BOOK = (id: string | number) => {
+    fetch(`${urlBooks}/books/${id}`, {
+        headers,
+        method: 'DELETE'
+    })
+    .then(res => res.json())
 }

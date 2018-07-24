@@ -52,15 +52,31 @@
     font-size: 0.8125em;
     margin-bottom: 0.25em;
     color: #333;
+    text-transform: capitalize;
 }
 .home__list--bookAuthor {
     margin-top: 0.25em;
     font-size: 0.6125em;
+    text-transform: capitalize;
+}
+
+.home__list--delete {
+    position: absolute;
+    bottom: 0;
+    left: 0.25em;
+    color: orangered;
+}
+.home__list--edit {
+    position: absolute;
+    bottom: 0;
+    right: 0.25em;
+    color: deepskyblue;
 }
 
 /* BOOK DETAIL */
 .book__title {
     font-size: 2em;
+    text-transform: capitalize;
 }
 .book__list {
     font-size: 1.4em;
@@ -90,7 +106,7 @@ label {
     margin-right: 10px;
     text-align: right;
 }
-[id ^= 'addBook'] {
+[id ^= 'addBook'], [id ^= 'editBook'] {
     width: 500px;
     border-radius: 8px;
 }

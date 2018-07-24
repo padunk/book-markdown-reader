@@ -1,0 +1,32 @@
+.deleteBook__main {
+   color: rgb(211, 7, 7);
+   text-align: center;
+}
+.deleteBook__bookTitle, .deleteBook__bookAuthor {
+   text-transform: capitalize;
+}
+.deleteBook__button--cancel {
+   background: linear-gradient(180deg,rgba(173,255,47,0.8), white, rgba(193,255,47, 1));
+   font-size: 1em;
+   font-family: inherit;
+   border-radius: 0.5em;
+}
+.deleteBook__button--submit {
+   background-color: rgb(245, 21, 21);
+   color: rgba(255, 255, 255, 0.8);
+}
+[class ^= 'deleteBook__button'] {
+   border: none;
+   display: block;
+   margin: auto;
+   margin-bottom: 2em;
+   width: 20rem;
+   padding: 1.5em 1em;
+   cursor: pointer;
+   font-weight: bold;
+   opacity: 0.65;
+   transition: opacity 400ms;
+}
+[class ^= 'deleteBook__button']:hover {
+   opacity: 1;
+}

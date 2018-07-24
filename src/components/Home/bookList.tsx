@@ -43,19 +43,31 @@ export class BookList extends React.Component<{}, IBookListState> {
                     return (
                         <li key={list.id + idx} className='home__list'>
                             <div className='home__list--imageDiv'>
-                            <Link 
-                                to={{
-                                    pathname: `/book/${list.book_title}`,
-                                    state: {
-                                        book_title: list.book_title,
-                                        ch_digit: list.chapter_digit,
-                                        ch_end: list.chapter_end,
-                                        ch_start: list.chapter_start,
-                                        url: list.url,
-                                    }
-                                }} >
-                                    <img src={list.image_src} alt={list.book_title} className='home__list--image' />
+                                <Link 
+                                    to={{
+                                        pathname: `/book/${list.book_title}`,
+                                        state: {
+                                            book_title: list.book_title,
+                                            ch_digit: list.chapter_digit,
+                                            ch_end: list.chapter_end,
+                                            ch_start: list.chapter_start,
+                                            url: list.url,
+                                        }
+                                    }} >
+                                        <img src={list.image_src} alt={list.book_title} className='home__list--image' />
                                 </Link>
+                                <Link to={{
+                                    pathname: `/deletebook/${list.book_title}`,
+                                    state: {
+                                        book: list
+                                    }
+                                }} className='home__list--delete'>🗑</Link>
+                                <Link to={{
+                                    pathname: `/editbook/${list.book_title}`,
+                                    state: {
+                                        book: list
+                                    }
+                                }} className='home__list--edit'>🖉</Link>
                             </div>
                             <div className='home__list--body'>
                                 <h4 className='home__list--bookTitle'>{list.book_title}</h4>

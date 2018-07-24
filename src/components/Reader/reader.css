@@ -1,3 +1,16 @@
+.reader__main {
+    margin-top: 2em;
+    text-align: center;
+}
+#reader__main--link:link,
+#reader__main--link:visited {
+    color: rgb(218, 142, 3);
+}
+#reader__main--link:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
 .reader__article {
     max-width: 80%;
     margin: 0 auto;
