@@ -1,6 +1,7 @@
 /* BOOK LIST */
 .home__main {
     max-width: 80%;
+    margin: auto;
 }
 
 .home__title {

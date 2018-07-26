@@ -14,6 +14,7 @@
 .reader__article {
     max-width: 80%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .reader__article > blockquote {
