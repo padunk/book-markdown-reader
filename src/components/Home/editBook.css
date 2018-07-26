@@ -12,3 +12,25 @@
    grid-template-columns: auto auto;
    justify-content: center;
 }
+
+@media only screen and (max-width: 930px) {
+   .editBook__form {
+       display: flex;
+       flex-flow: column;
+       flex-wrap: wrap;
+   }
+   [id ^= 'editBook'] {
+       width: 90%;
+       margin-top: 0;
+   }
+   label {
+       text-align: left;
+       margin: 0;
+   }
+}
+@media only screen and (max-width: 425px) {
+    .editBook__form, .editBook__main {
+        width: 90%;
+        margin: auto;
+    }
+}

@@ -4,6 +4,7 @@
 }
 .deleteBook__bookTitle, .deleteBook__bookAuthor {
    text-transform: capitalize;
+   font-weight: bold;
 }
 .deleteBook__button--cancel {
    background: linear-gradient(180deg,rgba(173,255,47,0.8), white, rgba(193,255,47, 1));
@@ -11,7 +12,12 @@
    font-family: inherit;
    border-radius: 0.5em;
 }
+fieldset {
+   margin: 1em auto;
+   border-radius: 10px;
+}
 .deleteBook__button--submit {
+   margin-top: 1em;
    background-color: rgb(245, 21, 21);
    color: rgba(255, 255, 255, 0.8);
 }
@@ -29,4 +35,14 @@
 }
 [class ^= 'deleteBook__button']:hover {
    opacity: 1;
+}
+
+@media only screen and (max-width: 425px) {
+   .deleteBook__main {
+      width: 80%;
+      margin: auto;
+   }
+   [class ^= 'deleteBook__button'] {
+      width: 80%;
+   }
 }

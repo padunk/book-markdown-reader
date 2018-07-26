@@ -56,11 +56,11 @@ export class AddBook extends React.Component<IAddBookProp, {}> {
                <input name='img_url' type='text' placeholder='https://wikimedia.org' required={true} id='addBook__input--imageURL' />
 
                <label htmlFor='bookURL'>Raw Markdown URL:
-                  <p style={{ fontSize: '0.75em'}}>ie: https://raw.githubusercontent.com/manuscript/ch1.md</p>
+                  <p style={{ fontSize: '0.75em'}}>ie: https://raw.githubusercontent.com/<wbr />manuscript/ch1.md</p>
                </label>
                <input name='book_url' type='url' placeholder='https://raw.githubusercontent.com/getify/Functional-Light-JS/master/manuscript/ch1.md' required={true} id='addBook__input--bookURL' />
 
-               <Link to='/'>
+               <Link to='/' className='addBook__link--cancel'>
                <button className='addBook__button--cancel'>Cancel</button>
                </Link>
                <button type='submit' className='addBook__button--submit' >Submit</button>

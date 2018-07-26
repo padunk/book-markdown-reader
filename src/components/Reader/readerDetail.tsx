@@ -47,10 +47,10 @@ export class Reader extends React.Component<IReaderProps, IReaderState> {
 
     public render () {
         return (
-            <div className='reader__main'>
+            <div className='readerDetail__main'>
                 {this.state.data && 
-                    <article 
-                        className='reader__article'
+                    <div 
+                        id='reader__article'
                         dangerouslySetInnerHTML={this.parseMD(this.state.data)}
                     />
                 }

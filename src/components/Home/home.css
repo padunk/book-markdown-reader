@@ -75,6 +75,10 @@
 }
 
 /* BOOK DETAIL */
+.book__main {
+    width: 80%;
+    margin: auto;
+}
 .book__title {
     font-size: 2em;
     text-transform: capitalize;
@@ -144,16 +148,41 @@ label {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 425px) {
+    .book__main {
+        width: 90%;
+        margin: auto;
+    }
+    .addBook__form, .addBook__main {
+        width: 90%;
+        margin: auto;
+    }
+}
+
 @media only screen and (max-width: 930px) {
     .addBook__form {
         display: flex;
         flex-flow: column;
         flex-wrap: wrap;
     }
+    .home__list--imageDiv {
+        margin: auto;
+    }
     [id ^= 'addBook'] {
         width: 90%;
     }
     label {
         text-align: left;
+    }
+    .addBook__link--cancel {
+        order: 2;
+    }
+    .addBook__button--submit {
+        order: 1;
+    }
+}
+@media only screen and (min-width: 1441px) {
+    .app__transGroup {
+        width: 100%;
     }
 }

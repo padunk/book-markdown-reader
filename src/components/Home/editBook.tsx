@@ -68,11 +68,11 @@ export class EditBook extends React.Component<IEditBookProp, {}> {
                <input name='edit_img_url' type='text' defaultValue={image_src} required={true} id='editBook__input--imageURL' />
 
                <label htmlFor='editBook__input--bookURL'>Raw Markdown URL:
-                  <p style={{ fontSize: '0.75em'}}>ie: https://raw.githubusercontent.com/manuscript/ch1.md</p>
+                  <p style={{ fontSize: '0.75em'}}>ie: https://raw.githubusercontent.com/<wbr />manuscript/ch1.md</p>
                </label>
                <input name='edit_book_url' type='url' defaultValue={url} required={true} id='editBook__input--bookURL' />
 
-               <Link to='/'>
+               <Link to='/' className='addBook__link--cancel'>
                <button className='addBook__button--cancel'>Cancel</button>
                </Link>
                <button type='submit' className='addBook__button--submit' >Submit</button>
