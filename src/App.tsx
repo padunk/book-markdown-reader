@@ -35,7 +35,7 @@ class App extends React.Component<IAppProp, {}> {
           <CSSTransition
             key={this.props.location.key}
             classNames='fade'
-            timeout={{ enter:650, exit: 300}}
+            timeout={{enter: 650, exit: 350}}
             appear={true}
             in={true}
             mountOnEnter={true}

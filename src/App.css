@@ -11,17 +11,43 @@
   padding-top: 1em;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: inherit;
+  }
+}
 .fade-enter {
   opacity: 0;
+  display: none;
 }
 .fade-enter-active {
-  opacity: 1;
-  transition: opacity 600ms ease-in;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-delay: 0.4s;
+  animation-fill-mode: backwards;
 }
-.fade-exit {
-  opacity: 1;
+.fade-enter-done {
+  animation-play-state: paused;
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: inherit;
+  }
+  to {
+    opacity: 0.01;
+    display: none;
+  }
+}
+
 .fade-exit-active {
-  opacity: 0;
-  transition: opacity 250ms ease-out;
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
 }
