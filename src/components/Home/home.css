@@ -183,6 +183,6 @@ label {
 }
 @media only screen and (min-width: 1441px) {
     .app__transGroup {
-        width: 100%;
+        width: 60%;
     }
 }

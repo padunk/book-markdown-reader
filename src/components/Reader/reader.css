@@ -20,6 +20,10 @@
     margin: auto;
     text-align: justify;
 }
+#reader__article > h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
 #reader__article > p {
     font-size: 1.25em;
     line-height: 1.56;
@@ -42,7 +46,7 @@ pre.language-js {
 }
 code:not(.language-js) {
     background-color: #ddd;
-    border-radius: 6px;
+    border-radius: 4px;
     padding-left: 8px;
     padding-right: 8px;
 }

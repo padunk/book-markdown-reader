@@ -1,18 +1,94 @@
 .navbar__main {
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    height: 3em;
     background: linear-gradient(120deg, hsla(200, 60%, 70%, 1), hsla(120, 70%, 80%, 1), hsla(60, 70%, 80%, 1), hsla(300, 60%, 70%, 1));
-    width: 100%;
-    top: 0;
     padding-top: 1em;
     z-index: 5;
     font-size: 1.5em;
     box-shadow: 2px 3px 20px rgba(0,0,0, 0.2), 1px 2px 15px rgba(0,0,0, 0.21);
 }
 
+@keyframes showTopSide {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.navbar__main--topSide {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    height: 2.75em;
+    width: 100%;
+    top: 0;
+    animation-name: showTopSide;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showLeftSide {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.navbar__main--leftSide {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding-left: 12px;
+    height: 100%;
+    width: 15%;
+    min-width: 100px;
+    animation-name: showLeftSide;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.navbar__main--leftSide > a {
+    margin-bottom: 1em;
+}
+
+@keyframes hideAnimation {
+    0% {
+        opacity: 1;
+        display: flex;
+        transform: translate3d(0,0,0);
+    }
+    50% {
+        visibility: hidden;
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        opacity: 0.01;
+        display: none;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+.hideNavbar {
+    animation-name: hideAnimation;
+    animation-delay: 0.2s;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
 .active {
     font-weight: bold;
-    color: #0000cc;
+    color: #6d6df6;
+    text-decoration: underline solid #6d6df6;
+}
+a:not(.active) {
+    text-decoration: none;
+    text-decoration-color: transparent;
+}
+a:not(.active):hover {
+    text-decoration: underline solid;
+    transition: 0.3s ease-in 0.1s;
+    text-decoration-color: #6d6df6;
 }
