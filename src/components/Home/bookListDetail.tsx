@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
+import { CHAPTER_REGEX } from '../utils/helper';
+
 import './home.css';
 
 interface IBookListDetailProp {
@@ -38,7 +40,7 @@ export class BookListDetail extends React.Component<IBookListDetailProp, IBookLi
     }
 
     public loop() {
-        const regex = /\d{1,2}(?=.md)/i;
+        const regex = CHAPTER_REGEX;
         const { ch_digit, ch_end, ch_start, url } = this.props.location.state;
         const { detail } = this.props.match.params;
 

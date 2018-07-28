@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import uuidv4 from 'uuid/v4';
 
+import * as Helpers from '../utils/helper';
+
 import { addBook } from '../api/fetchingAPI';
 
 import './home.css';
@@ -13,20 +15,18 @@ interface IAddBookProp {
 export class AddBook extends React.Component<IAddBookProp, {}> {
    constructor(props: IAddBookProp) {
       super(props);
-
-      this.handleSubmit = this.handleSubmit.bind(this);
    }
 
-   public handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+   public handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const author = e.currentTarget.book_author.value.trim();
-      const title = e.currentTarget.book_title.value.trim();
-      const start = e.currentTarget.ch_start.value;
-      const end = e.currentTarget.ch_end.value;
+      const author = Helpers.trimValue(Helpers.htmlValue(e)('book_author'));
+      const title = Helpers.trimValue(Helpers.htmlValue(e)('book_title'));
+      const start = Helpers.htmlValue(e)('ch_start');
+      const end = Helpers.htmlValue(e)('ch_end');
       const id = uuidv4();
-      const imgSrc = e.currentTarget.img_url.value.trim();
-      const url = e.currentTarget.book_url.value.trim();
-      const digit = String(url).match(/\d{1,2}(?=\.md)/i)![0].length;
+      const imgSrc = Helpers.trimValue(Helpers.htmlValue(e)('img_url'));
+      const url = Helpers.trimValue(Helpers.htmlValue(e)('book_url'));
+      const digit = String(url).match(Helpers.CHAPTER_REGEX)![0].length;
 
       // tslint:disable-next-line:no-console
       // console.log(author, title, start, end, id, imgSrc, url, digit);

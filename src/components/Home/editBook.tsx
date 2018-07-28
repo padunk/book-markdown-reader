@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom';
 
 import { editBook } from '../api/fetchingAPI';
+import { CHAPTER_REGEX } from '../utils/helper';
 
 import './editBook.css';
 
@@ -35,7 +36,7 @@ export class EditBook extends React.Component<IEditBookProp, {}> {
       const end = e.currentTarget.edit_ch_end.value;
       const imgSrc = e.currentTarget.edit_img_url.value.trim();
       const url = e.currentTarget.edit_book_url.value.trim();
-      const digit = String(url).match(/\d{1,2}(?=\.md)/i)![0].length;
+      const digit = String(url).match(CHAPTER_REGEX)![0].length;
 
       // tslint:disable-next-line:no-console
       // console.log(author, title, start, end, imgSrc, digit, url);

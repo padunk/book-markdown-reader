@@ -17,7 +17,7 @@ export class NavBar extends React.Component<{}, {}> {
         
         const userWidth = window.innerWidth;
         // tslint:disable-next-line:no-console
-        // console.log(userWidth);
+        // console.log(e);
         const nav = document.getElementById('navbar');
         const positionY:number = e.srcElement.scrollingElement.scrollTop;
 
@@ -26,7 +26,7 @@ export class NavBar extends React.Component<{}, {}> {
                 nav!.classList.remove('hideNavbar');
                 nav!.classList.remove('navbar__main--leftSide');
                 nav!.classList.add('navbar__main--topSide');
-            } else if (positionY >= 250 && positionY <= 300) {
+            } else if (positionY > 200 && positionY <= 250) {
                 nav!.classList.add('hideNavbar');
             } else {
                 nav!.classList.remove('hideNavbar');

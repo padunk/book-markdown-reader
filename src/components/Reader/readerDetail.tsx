@@ -37,8 +37,8 @@ export class Reader extends React.Component<IReaderProps, IReaderState> {
     public parseMD = (str: string) => {
         marked.setOptions({
             gfm: true,
-            highlight() {
-                return Prism.highlightAll();
+            highlight(code:string, lang:string) {
+                return Prism.highlight(code, Prism.languages[lang || 'markup'], lang);
             },
             sanitize: true,
         });
