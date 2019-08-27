@@ -28,7 +28,6 @@ export class AddBook extends React.Component<IAddBookProp, {}> {
       const url = Helpers.trimValue(Helpers.htmlValue(e)('book_url'));
       const digit = String(url).match(Helpers.CHAPTER_REGEX)![0].length;
 
-      // tslint:disable-next-line:no-console
       // console.log(author, title, start, end, id, imgSrc, url, digit);
       addBook(author, title, digit, start, end, id, imgSrc, url);
       this.props.history.push('/');

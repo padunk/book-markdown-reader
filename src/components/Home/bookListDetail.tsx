@@ -53,7 +53,7 @@ export class BookListDetail extends React.Component<IBookListDetailProp, IBookLi
             }
             this.setState(prevState => ({
                 liElement: prevState.liElement.concat(
-                    <li key={i} className='book__list'><Link to={{ pathname: `/reader/${detail}/chapter${i}`, state: { mdURL: newURL } }}>Chapter {i}</Link></li>
+                    <li key={i} className='book__list'><Link to={{ pathname: `/reader/${detail}/chapter${i}`, state: { mdURL: newURL, ch_start, ch_end, ch_digit } }}>Chapter {i}</Link></li>
                 )
             }))
         }
