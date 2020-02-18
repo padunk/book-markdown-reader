@@ -1,5 +1,7 @@
 .navbar__main {
-    background: linear-gradient(120deg, hsla(200, 60%, 70%, 1), hsla(120, 70%, 80%, 1), hsla(60, 70%, 80%, 1), hsla(300, 60%, 70%, 1));
+    background: linear-gradient(120deg, hsla(200, 60%, 70%, 0.8), hsla(120, 70%, 80%, 0.8), hsla(60, 70%, 80%, 0.8), hsla(300, 60%, 70%, 0.8));
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     padding-top: 1em;
     z-index: 5;
     font-size: 1.5em;
@@ -45,7 +47,7 @@
     flex-wrap: wrap;
     padding-left: 12px;
     height: 100%;
-    width: 15%;
+    /* width: 15%; */
     min-width: 100px;
     animation-name: showLeftSide;
     animation-duration: 0.4s;
