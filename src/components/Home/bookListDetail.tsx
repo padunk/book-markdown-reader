@@ -66,7 +66,7 @@ export class BookListDetail extends React.Component<IBookListDetailProp, IBookLi
             <div className='book__main'>
                 <h2 className='book__title'>{this.props.match.params.detail}</h2>
                 <ul className='book__ul'>
-                    {this.state.liElement !== [] 
+                    {this.state.liElement.length !== 0 
                     ? this.state.liElement.map(el => {
                         return el;
                     })
