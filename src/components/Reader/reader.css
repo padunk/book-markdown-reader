@@ -1,6 +1,10 @@
 /* MAIN READER */
+pre, code {
+    font-size: 1.6rem;
+}
+
 .reader__main {
-    margin-top: 2em;
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -23,9 +27,21 @@
 #reader__article > h1 {
     text-align: center;
     text-transform: capitalize;
+    font-size: 2.4rem;
+}
+#reader__article > h1:last-child {
+    margin-bottom: 3rem;
+}
+#reader__article > h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+#reader__article > h3 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
 }
 #reader__article > p {
-    font-size: 1.25em;
+    font-size: 1.6rem;
     line-height: 1.56;
     letter-spacing: -0.03em;
 }
@@ -36,7 +52,8 @@
 }
 pre.language-js {
     background-color: #eee;
-    padding: 1em;
+    padding: 1rem;
+    white-space: pre-wrap;
 }
 .keyword {
     font-weight: bold;

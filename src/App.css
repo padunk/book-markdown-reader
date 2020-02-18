@@ -5,10 +5,10 @@
 
 .app {
   position: relative;
-  top: 5.25em;
+  top: 5.25rem;
   display: flex;
   justify-content: center;
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 @keyframes fadeIn {
