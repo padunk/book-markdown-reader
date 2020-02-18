@@ -3,8 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const config = require('./config')
-const books = require('./books')
+const config = require('../../src/config')
+const books = require('../../src/books')
 
 const app = express()
 
