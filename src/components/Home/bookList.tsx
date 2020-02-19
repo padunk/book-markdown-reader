@@ -37,7 +37,7 @@ export class BookList extends React.Component<{}, IBookListState> {
     public render () {
         return (
             <div className='home__main'>
-                <h3 className='home__title'>List of Free Books</h3>
+                <h3 className='home__title'>List of Great JS Books</h3>
                 <ol className='home__ul'>
                 {this.state.lists.map((list, idx) => {
                     return (
@@ -77,6 +77,7 @@ export class BookList extends React.Component<{}, IBookListState> {
                     );
                 })}
                 </ol>
+                <h4 className="home__support">Support the author by buying the book you love at your favourite bookstore!</h4>
             </div>
         );
     }
