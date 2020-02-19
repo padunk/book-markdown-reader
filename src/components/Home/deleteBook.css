@@ -7,10 +7,9 @@
    font-weight: bold;
 }
 .deleteBook__button--cancel {
-   background: linear-gradient(180deg,rgba(173,255,47,0.8), white, rgba(193,255,47, 1));
-   font-size: 1em;
+   background: dodgerblue;
+   font-size: 1.6rem;
    font-family: inherit;
-   border-radius: 0.5em;
 }
 fieldset {
    margin: 1em auto;

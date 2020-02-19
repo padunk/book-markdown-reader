@@ -8,15 +8,6 @@ pre, code {
     text-align: center;
 }
 
-#reader__main--link:link,
-#reader__main--link:visited {
-    color: rgb(218, 142, 3);
-}
-#reader__main--link:hover {
-    color: orange;
-    text-decoration: underline;
-}
-
 /* READER DETAIL */
 #reader__article {
     width: 80%;
@@ -66,4 +57,22 @@ code:not(.language-js) {
     border-radius: 4px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.readerDetail__main--controller {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+.link__button:link,
+.link__button:visited {
+    color: rgb(132, 3, 218);
+}
+.link__button:hover {
+    color: rgb(255, 0, 119);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
 }

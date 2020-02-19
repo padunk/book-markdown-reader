@@ -5,7 +5,7 @@
 }
 
 .home__title {
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -18,8 +18,8 @@
     padding: 0;
 }
 .home__list {
-    font-size: 1.5em;
-    padding-bottom: 0.5em;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
     list-style-type: none;
     display: flex;
     flex-flow: column;
@@ -50,28 +50,33 @@
     transform: scale(1.05);
 }
 .home__list--bookTitle {
-    font-size: 0.8125em;
-    margin-bottom: 0.25em;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
     color: #333;
     text-transform: capitalize;
 }
 .home__list--bookAuthor {
-    margin-top: 0.25em;
-    font-size: 0.6125em;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
     text-transform: capitalize;
 }
 
 .home__list--delete {
     position: absolute;
     bottom: 0;
-    left: 0.25em;
+    left: 0.5rem;
     color: orangered;
 }
 .home__list--edit {
     position: absolute;
     bottom: 0;
-    right: 0.25em;
+    right: 0.5rem;
     color: deepskyblue;
+}
+.home__support {
+    font-size: 1.6rem;
+    color: dodgerblue;
+    text-align: center;
 }
 
 /* BOOK DETAIL */
@@ -80,11 +85,11 @@
     margin: auto;
 }
 .book__title {
-    font-size: 2em;
+    font-size: 3.2rem;
     text-transform: capitalize;
 }
 .book__list {
-    font-size: 1.4em;
+    font-size: 2rem;
     padding-top: 9px;
     padding-bottom: 9px;
 }
