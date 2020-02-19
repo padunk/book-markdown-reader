@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { CHAPTER_REGEX } from '../utils/helper';
+import { checkChapter } from '../utils/helper';
 
 import './home.css';
 
@@ -40,17 +40,11 @@ export class BookListDetail extends React.Component<IBookListDetailProp, IBookLi
     }
 
     public loop() {
-        const regex = CHAPTER_REGEX;
         const { ch_digit, ch_end, ch_start, url } = this.props.location.state;
         const { detail } = this.props.match.params;
 
         for (let i = ch_start; i <= ch_end; i++) {
-            let newURL = '';
-            if (ch_digit === 2 && i <= 9) {
-                newURL = url.replace(regex, '0' + String(i));
-            } else {
-                newURL = url.replace(regex, String(i));
-            }
+            const newURL = checkChapter(ch_digit, url, String(i));
             this.setState(prevState => ({
                 liElement: prevState.liElement.concat(
                     <li key={i} className='book__list'><Link to={{ pathname: `/reader/${detail}/chapter${i}`, state: { mdURL: newURL, ch_start, ch_end, ch_digit } }}>Chapter {i}</Link></li>

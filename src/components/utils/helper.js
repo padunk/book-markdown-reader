@@ -7,3 +7,13 @@ export const htmlValue = event => node => {
 }
 
 export const trimValue = value => value.trim();
+
+export const checkChapter = (digit, baseURL, chapter) => {
+   let url;
+   if (digit === 2 && chapter <= 9) {
+      url = baseURL.replace(CHAPTER_REGEX, '0' + String(chapter));
+   } else {
+      url = baseURL.replace(CHAPTER_REGEX, String(chapter));
+   }
+   return url;
+}
