@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "insane": "^2.6.2",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
